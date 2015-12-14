@@ -1,0 +1,1266 @@
+/*
+Theme Name: Delicious Meals
+Theme URI: http://www.dubois-geoffrey.fr/deliciousMeals
+Author: DUBOIS Geoffrey
+Author URI: http://www.dubois-geoffrey.fr/
+Description: Creation d'un thème Wordpress pour le site Delicious Meals. Ce site est la vitrine d'un food truck spécialisé dans la restauration Canadienne.
+Version: 1.0
+*/
+
+/* CSS RESET
+/* ----------------------------------------------------------------*/
+*, html, div, ul, li, ol, dl, dt, dd, h1, h2, h3, h4, h5, h6, label, fieldset, input, th, td, hr, p {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset, img{
+    border: 0;
+}
+
+ol, ul, li{
+    list-style: none;
+}
+
+a img{
+    border: 0;
+}
+
+header{
+
+}
+
+html{
+    background-color: #ECE9E4;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    line-height: 1.5;
+    color: #323232;
+}
+
+#clean{
+    clear: both;
+}
+
+.bloc_menu{
+    width: 100%;
+    position: relative;
+    background-color: #E3E0D9;
+}
+
+#menu{
+    position: absolute;
+    right: 120px;
+    z-index: 999;
+}
+
+#menu li{
+    display: inline-block;
+}
+
+#menu li a{
+    text-decoration: none;
+    display: block;
+    color: #000;
+}
+
+#menu ul li a{
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 75px;
+    padding-bottom: 26px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #595548;
+}
+
+#menu ul li.current-menu-item a{
+    background: url("img/bg_menu.png");
+    color: #FFF
+}
+
+#menu ul li a:hover{
+    background: url("img/bg_menu_hover.png");
+}
+
+.flexslider img{
+    position: relative;
+    top:0;
+    width: 100%;
+    height: 666px;
+    z-index: 2;
+}
+
+.flex-direction-nav {*height: 0;}
+.flex-direction-nav a {z-index:5;  width: 34px; height: 35px; margin: -5px 0 0 0; display: block; background: url(img/slider/arrows.png) no-repeat bottom left; position: absolute; top: 50%; cursor: pointer; text-indent: -9999px; opacity: 0; -webkit-transition: all .3s ease;}
+.flex-direction-nav .flex-next {background-position: bottom right; right: 0px; }
+.flex-direction-nav .flex-prev {background-position: bottom left;  left: 0px;}
+.flexslider:hover .flex-next {opacity: 0.8; right: 20px;}
+.flexslider:hover .flex-prev {opacity: 0.8; left: 20px;}
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {opacity: 1;}
+.flex-direction-nav .flex-disabled {opacity: .3!important; filter:alpha(opacity=30); cursor: default;}
+
+/* Control Nav */
+.flex-control-nav { z-index:5; width: 100%; position: absolute; top: 645px; text-align: center; }
+.flex-control-nav li {margin: 0 1px; display: inline-block; zoom: 1; *display: inline;}
+.flex-control-paging li a {width: 20px; height: 20px; display: block; background: url(img/slider/bg_bullets.png) 0px -25px no-repeat;  cursor: pointer; text-indent: -9999px;}
+.flex-control-paging li a:hover { background-position:0px -48px; }
+.flex-control-paging li a.flex-active {  background-position:0px -2px; cursor: default; }
+
+.bloc_welcome img{
+    width: 400px;
+    height: 170px;
+}
+
+.bloc_welcome{
+    width : 400px;
+    display: inline-block;
+    text-align: justify;
+    padding-left: 35px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.bloc_welcome hr{
+    display: none;
+}
+
+.bloc_welcome h2, .bloc_info h1{
+    color: #7b7562;
+    font-size: 27px;
+}
+
+.bloc_welcome .btn{
+    width: 101px;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #323232;
+    font-size: 15px;
+    background: #dbcaca;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+    font-weight: 700;
+    opacity: 0.80;
+}
+
+.btn:hover, .nav-single a:hover {
+    cursor: pointer;
+    opacity: 1;
+    text-decoration: none;
+}
+
+
+#main, #info{
+    text-align: center;
+    background: url("img/bg_content.png");
+}
+
+.bloc_info{
+    width : 33%;
+    height: 145px;
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background: url("img/bg_info.png");
+    float: left;
+}
+
+#content_sidebar .bloc_info{
+}
+
+.hr{
+    position: absolute;
+    width: 1px;
+    height: inherit;
+    margin-left: -30px;
+}
+
+#content_sidebar .bloc_info:first-child .hr{
+    display: none;
+}
+
+
+
+.bloc_info h1{
+    color: #7b7562;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#info{
+    width: 100%;
+    background: url("img/bg_info.png");
+}
+
+footer{
+    background-color: #EBE8E3;
+    height: 100px;
+}
+
+#menu_footer li a{
+    line-height: 100px;
+    text-decoration: none;
+    display: block;
+    color: #aca693;
+}
+
+#menu_footer li{
+    padding-right: 30px;
+    display: inline-block;
+}
+
+#menu_footer{
+    float: right;
+}
+
+.bloc_info .textwidget{
+    font-size: 14px;
+    text-align: left;
+    line-height: 1.5;
+}
+
+#foods, #content_news{
+    padding-top: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+    width: 1055px;
+}
+
+#content_news{
+    display: inline-block;
+    text-align: justify;
+    float: left;
+}
+
+.sidebar{
+    float: right;
+}
+
+.sidebar li{
+    margin-bottom: 5px;
+    background: url("img/bg_menu.png");
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 5px;
+    width: 135px;
+}
+
+.sidebar li:hover{
+    background: url("img/bg_menu_hover.png");
+    cursor: pointer;
+}
+
+.sidebar li:hover a{
+    margin-left: 10px;
+}
+
+ul li.current-cat{
+    background: url("img/bg_menu_hover.png");
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 10px;
+}
+
+.sidebar li a{
+    color: #000000;
+    padding-left: 5px;
+}
+
+.sidebar h2{
+    color: #7b7562;
+}
+
+.sidebar h2:last-child{
+    border-bottom: 1px solid;
+}
+
+.sidebar hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.red{
+    color: red;
+}
+
+
+#content_news h1{
+    color: #7b7562;
+}
+
+#hr_food{
+    background: url("img/hr_food.png") no-repeat;
+    padding-bottom: 50px;
+    width: 100%;
+}
+
+#details, #drink{
+    width: 477px;
+    float: left;
+    padding-right: 50px;
+}
+
+#details h1, #drink h1{
+    padding-bottom: 10px;
+}
+
+#details #food:last-child hr, #drink #food:last-child hr{
+        display: none;
+    }
+
+.nav-single{
+    margin-bottom: 30px;
+}
+
+#nav-left{
+    float: left;
+}
+
+#nav-right{
+    float: right;
+}
+
+
+#foods h2{
+    float: left;
+    color: #425258;
+}
+
+#price{
+    float: right;
+}
+
+#food{
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#foods h1{
+    color: #7b7562;
+}
+
+#food p{
+    text-align: justify;
+    padding-bottom: 15px;
+}
+
+
+#food:last-child{
+    padding-bottom: 45px;
+}
+
+#details a, #drink a{
+    color: #5f757e;
+}
+
+#details a:hover, #drink a:hover{
+    color: #425258;
+}
+
+.news{
+    display: inline-block;
+    width: 825px;
+    padding-bottom: 30px;
+
+}
+
+
+.meta{
+    margin-bottom: 10px;
+    color: #5f757e;
+    padding-left: 30px;
+}
+
+.details_news{
+    background-color: #F6F4F1;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.details_news img{
+    width: 100%;
+    height: auto;
+}
+
+.details_news h2 a{
+    color: #5f757e;
+    font-style: italic;
+}
+
+.details_news h2{
+    padding: 30px;
+    color: #7b7562;
+}
+
+.details_news p{
+    padding: 30px;
+}
+
+.fix{
+    color: #aeaeab;
+}
+.btn{
+    width: 83px;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #323232;
+    font-size: 15px;
+    background: #dbcaca;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    display: block;
+    margin-left: 30px;
+    font-weight: 700;
+    opacity: 0.80;
+    margin: auto;
+}
+
+.nav-single a{
+    width: auto;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #000000;
+    font-size: 20px;
+    background: #dbcaca;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+
+
+.details_news p{
+    padding-bottom: 30px;
+}
+
+.ssba img{
+    width: 40px;
+    height: 40px;
+    padding-top: 20px;
+}
+
+.ssba a{
+    margin-left: 30px;
+    color: #000000;
+
+}
+
+#search{
+    width: 42px;
+    position: absolute;
+    z-index: 3;
+    top: 73px;
+    right: 575px;
+    transition: width 1s;
+    background:url("img/search.png") no-repeat;
+    background-color: none;
+    margin-right: 20px
+}
+
+#search.clicked {
+    width: 200px;
+}
+
+#search{
+    line-height: 10px;
+}
+
+.search-highlight {
+    background:#FFFF00
+}
+
+
+.textwidget .hours{
+    float: left;
+}
+
+.textwidget .day{
+    float: left;
+    width: 60px;
+    text-align: left;
+    padding-right: 100px;
+}
+
+#content_sidebar{
+}
+
+iframe{
+    width: 100%;
+}
+
+.place-card .place-card-large{
+   width: 10px;
+}
+
+.wpcf7-form input, .wpcf7-form textarea{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    width: 250px;
+}
+
+input{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+
+
+.bloc_menu input{
+    padding-left: 38px;
+    padding-right: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+#mapDiv{
+   padding: 100px;
+}
+
+input.wysija-submit.wysija-submit-field{
+    cursor: pointer;
+    margin-top: 0px;
+    display: inline-block!important;
+    width: auto;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #323232;
+    font-size: 15px;
+    background: #dbcaca;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    display: block;
+    margin-left: 0px;
+    margin-top: 10px;
+    font-weight: 700;
+    opacity: 0.80;
+    
+}
+
+input.wysija-submit.wysija-submit-field:hover{
+   opacity: 1;
+}
+
+.wp-pagenavi{
+    text-align: center;
+}
+
+.wp-pagenavi a, .wp-pagenavi span{
+    border: none !important;
+}
+
+.pages{
+    padding: 0px;
+    padding-right: 50px;
+}
+
+.wp-pagenavi a{
+    padding: 10px;
+}
+
+.contact h2{
+    color: #7b7562;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#envoyer{
+    width: 15%!important;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-left: 0px;
+}
+
+#envoyer:hover{
+    opacity: 1;
+}
+
+@media (min-width:320px) and (max-width: 480px){ /* smartphones, iPhone, portrait 480x320 phones */ 
+
+    p{
+        font-family: Arial, 'Helvetica', sans-serif;
+        font-size: 12px;
+    }
+
+    h1, h2{
+        font-size: 12px;
+    }
+
+    .flexslider{
+        display: none;
+    }
+
+    #menu li{
+        -webkit-border-radius: 20;
+        -moz-border-radius: 20;
+         border-radius: 20px;
+         display: block;
+         border:1px solid;
+
+    }
+
+    #menu ul li.current-menu-item {
+        background: url("img/bg_menu.png");
+        color: #FFF
+    }
+
+    #menu ul li.current-menu-item a{
+        background: none;
+        color: #FFF
+    }
+
+    #menu ul li a:hover{
+         background:none;
+    }
+
+    #menu ul li:hover{
+        background: url("img/bg_menu_hover.png");
+    }
+
+    #menu ul li a{
+        padding: 0px;
+        width: 80%;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #menu{
+        top: 0;
+        left: 0;
+        position: relative;
+    }
+
+    .bloc_menu{
+        width: 100%;
+        margin: 0 auto;
+        background: none;
+    }
+
+    .btn{
+        margin: 0 auto;
+    }
+
+    .bloc_welcome img{
+        width: 60%;
+        height: 150px;
+    }
+
+    .textwidget .day{
+        padding-right: 55px;
+    }
+
+    .bloc_welcome{
+        width: 100%;
+        text-align: center;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+    }
+
+    .bloc_welcome hr{
+        margin-right: auto;
+        margin-left: auto;
+        width: 60%;
+        display: block;
+    }
+
+    .bloc_welcome h2{
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-size: 12px;
+    }
+
+    .bloc_welcome:last-child hr{
+        display: none;
+    }
+
+    .bloc_welcome p{
+        font-size: 12px;
+        text-align: justify;
+        padding: 30px;
+
+    }
+
+    .bloc_welcome .btn{
+        font-size: 12px;
+        padding: 7px 17px 7px 17px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .bloc_info{
+        width: 100%;
+        height: auto;
+        padding-left: 0px;
+    }
+
+    .sidebar hr{
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+   .hr{
+        margin-top: -15px;
+        width: 85%;
+        border-bottom: 1px solid;
+        position: inherit;
+        margin-left: auto;
+        margin-right: auto;
+   }
+
+   .bloc_info h1{
+        font-size: 12px;
+        padding-top: 10px;
+   }
+
+
+    .bloc_info .textwidget{
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .bloc_info .textwidget p{
+        margin-left: 34%;
+    }
+
+
+    #search{
+        width: 0px;
+    }
+
+    #foods, #content_news{
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 25px;
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .sidebar{
+        position: absolute;
+        top: 197px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #hr_food{
+        padding-bottom: 20px;
+    }
+
+    hr{
+        margin-top: 10px;
+    }
+
+    .sidebar ul li{
+        padding-left: 0px;
+        width: 120px;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    .sidebar li a{
+        font-size: 12px;
+    }
+
+    .details_news:first-child{
+        margin-top: 142px;
+    }
+
+    .contact{
+        margin-top: 20px;
+    }
+
+
+    #content_news h1, #foods h1{
+        padding-left: 15px;
+        text-align: left;
+    }
+
+    #content_news input{
+        width: 90%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .sidebar h2{
+        margin-top: 27px
+    }
+
+    #details h1, #drink h1{
+        text-align: center;
+    }
+
+    #details, #drink{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        padding-right: 0px;
+    }
+
+    #details #food:last-child hr, #drink #food:last-child hr{
+        display: none;
+    }
+
+
+
+    #food{
+        padding-right: 15px;
+    }
+
+    .details_news img{
+        width: 60%;
+        height: 150px;
+    }
+
+    .meta{
+        padding-left: 0px;
+    }
+
+    .details_news p{
+        text-align: justify;
+    }
+
+    .news{
+        width: 100%;
+    }
+
+    div#mapp0_layout.mapp-layout{
+        width: 100%!important;
+    }
+
+    div#mapp0.mapp-canvas{
+        height: 300px !important;
+    }
+
+    #envoyer{
+        width: 50%!important;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin: 0 auto;
+    }
+
+    #menu_footer{
+        text-align: center;
+        float: none;
+    }
+
+    #menu_footer li{
+        padding-right: 10px;
+    }
+
+    #menu_footer li:first-child{
+        padding-left: 8px;
+    }
+
+    .textwidget .day{
+        padding-right: 0px;
+    }}
+
+@media (min-width:641px) and (max-width: 960px){ /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+    
+
+    .bloc_info{
+        padding-left: 0px;
+        width: 33%;
+    }
+
+    .bloc_welcome h2{
+        text-align: center;
+    }
+
+    .bloc_welcome .btn{
+        margin: auto;
+        margin-top: 10px;
+    }
+
+    #content_news, #foods{
+        padding: 0px;
+        width: 100%;
+    }
+
+    .news{
+        width: 100%;
+    }
+
+    #content_news h1{
+        position: relative;
+        top: 150px;
+        margin-bottom: 165px;
+        padding-left: 20px;
+    }
+
+    #foods h1{
+        position: relative;
+        top: 150px;
+        margin-bottom: 165px;
+        padding-left: 20px;
+    }
+
+    #details .title, #drink .title{
+        top: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    #drink{
+        width: 100%;
+        padding-right: 0px;
+    }
+
+    .details_news .title h1{
+        margin-top: 10px;
+    }    
+
+    .details_news h2{
+        margin-top: 40px;
+    }
+
+    .sidebar{
+        position: absolute;
+        top: 218px;
+        width: 100%;
+    }
+
+    .sidebar li{
+        display: inline-block;
+    }
+
+    .sidebar h2{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .sidebar ul{
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .sidebar hr{
+        width: 50%;
+        margin: auto;
+    }
+
+    .textwidget .day{
+        padding-right: 55px;
+    }
+
+    #details{
+        width: 100%;
+        padding-right: 0px;
+    }
+
+    .bloc_info{
+        width: 100%;
+        height: auto;
+        padding-left: 0px;
+    }
+
+    .bloc_info h1{
+        font-size: 12px;
+        padding-top: 10px;
+   }
+
+
+    .bloc_info .textwidget{
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .bloc_info .textwidget p{
+        width: 27%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: right;
+    }
+
+    .hr{
+        margin-top: -15px;
+        width: 85%;
+        border-bottom: 1px solid;
+        position: inherit;
+        margin-left: auto;
+        margin-right: auto;
+   }
+
+   .textwidget .hours, .textwidget .day{
+        float: none;
+   }
+
+   #search{
+        display: none;
+   }
+
+   #menu{
+        right: 0px;
+        width: 100%;
+        text-align: center;
+   }
+
+   div#mapp0_layout.mapp-layout{
+        width: 100%!important;
+    }
+
+    div#mapp0.mapp-canvas{
+        height: 300px !important;
+    }
+
+    #envoyer{
+        width: 50%!important;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin: 0 auto;
+    }
+
+    .contact h2{
+        text-align: center;
+    }
+
+    div.wpcf7{
+        text-align: center!important;
+    }
+
+    .btn{
+        margin: auto;
+    }
+}
+
+
+
+
+@media (min-width:481px) and (max-width: 640px){ /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+    p{
+        text-align: justify;
+    }
+
+    #search{
+        display: none;
+    }
+
+    #menu{
+        width: 100%;
+        text-align: center;
+        right: 0;
+    }
+
+    .bloc_info{
+        width: 100%;
+        height: auto;
+        padding-left: 0px;
+    }
+
+     .bloc_info h1{
+        font-size: 12px;
+        padding-top: 10px;
+   }
+
+   .bloc_info .textwidget{
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .bloc_info .textwidget p{
+       margin-left: 32%;
+    }
+
+    .textwidget .day,.textwidget .hours{
+        float: left;
+    }
+
+    .textwidget .day{
+        padding-right: 34px;
+    }
+
+
+
+    .hr{
+        margin-top: -15px;
+        width: 85%;
+        border-bottom: 1px solid;
+        position: inherit;
+        margin-left: auto;
+        margin-right: auto;
+   }
+
+   #foods, #content_news{
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 25px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .details_news:first-child{
+        margin-top: 142px;
+    }
+
+    .details_news img{
+        width: 60%;
+        height: 150px;
+    }
+
+     .news{
+        width: 100%;
+    }
+
+    #content_news h1{
+        position: relative;
+        top: 110px;
+        margin-bottom: 120px;
+    }
+
+     .sidebar{
+        position: absolute;
+        top: 218px;
+        width: 100%;
+    }
+
+    .sidebar li{
+        display: inline-block;
+    }
+
+    .sidebar h2{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .sidebar ul{
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .sidebar hr{
+        width: 50%;
+        margin: auto;
+    }
+
+    #hr_food{
+        padding-bottom: 0px;
+    }
+
+    .wysija-paragraph{
+        width: 100%;
+        text-align: center;
+    }
+
+    #foods h1{
+        position: relative;
+        top: 110px;
+        margin-bottom: 120px;
+    }
+
+    #details{
+        width: 100%;
+        padding-right: 0px;
+    }
+
+    #details, #drink{
+        padding-right: 0px;
+    }
+
+    #foods #details .title{
+        top: 25px;
+        margin-bottom: 50px;
+    }
+
+    #drink{
+        width: 100%;
+
+    }
+
+    #foods #drink .title{
+        top: 0px;
+        margin-bottom: 35px;
+    }
+
+    #menu{
+        right: 0px;
+        width: 100%;
+        text-align: center;
+   }
+
+   div#mapp0_layout.mapp-layout{
+        width: 100%!important;
+    }
+
+    div#mapp0.mapp-canvas{
+        height: 300px !important;
+    }
+
+    #envoyer{
+        width: 50%!important;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin: 0 auto;
+    }
+
+    .contact h2{
+        text-align: center;
+    }
+
+    div.wpcf7{
+        text-align: center!important;
+    }
+
+    .btn{
+        margin: auto;
+    }
+
+    .wpcf7 p{
+        text-align: center!important;
+    }
+
+}
+@media (min-width:961px) and (max-width: 1024px){ /* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:1025px) and (max-width: 1280px){ /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+
+
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    #search{
+        width: 0px;
+    }
+
+    .bloc_welcome .btn{
+        width: 103px;
+    }
+
+    .btn{
+        width: 84px;
+    }
+}
